@@ -104,7 +104,8 @@ venv.bak/
 
 # Custom
 __*.ipynb
-dataset
+**/dataset/*
+!**/dataset/new
 *.zip
 *.png
 wandb
