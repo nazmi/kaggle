@@ -84,7 +84,7 @@ def train():
     wandb.init(project="sweep-tsp")
     # build input pipeline using tf.data
     train_data = tf.data.Dataset.from_tensor_slices((X_train, y_train))
-    train_data = prepare(train_data, batch_size=wandb.config.batch_size, cache=True)
+    train_data = prepare(train_data,shuffle=True, batch_size=wandb.config.batch_size, cache=True)
 
     valid_data = tf.data.Dataset.from_tensor_slices((X_test, y_test))
     valid_data = prepare(valid_data, batch_size=wandb.config.batch_size, cache=True)
