@@ -1,0 +1,28 @@
+method: bayes
+metric:
+  goal: minimize
+  name: val_rmse
+parameters:
+  batch_size:
+    distribution: q_uniform
+    min: 8
+    max: 256
+    q: 8
+  fc_layer_size:
+    distribution: q_uniform
+    min: 32
+    max: 2048
+    q: 8
+  ratio:
+    distribution: int_uniform
+    min: 1
+    max: 4
+  learning_rate:
+    distribution: uniform
+    max: 5e-3
+    min: 1e-5
+  log_step:
+    value: 50
+  val_log_step:
+    value: 20
+program: train.py
