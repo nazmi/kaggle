@@ -7,13 +7,21 @@ The Traveling Salesperson Problem (TSP) is a class problem of computer science t
 ## Submission
 |Layers||
 |---|---|
-|`Conv2D`| 8-16-32-64|
+|`Conv2D`| 32-64|
 |`GlobalAverage2D`||
-|`Dense`| 256-128|
+|`Dense`| 256-128-1|
 
 |#|Score|
 |---|---|
 |5/41|492|
 
-
 ## Upsolve
+
+3 channel * 256 bins of histograms = 768 features
+Shuffle = False
+|Layers||
+|---|---|
+|`Flatten`||
+|`Dense`| 1504-752-1|
+
+Improved Score: **138.23716**
