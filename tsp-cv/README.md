@@ -18,7 +18,6 @@ The Traveling Salesperson Problem (TSP) is a class problem of computer science t
 ## Upsolve
 
 3 channel * 256 bins of histograms = 768 features
-Shuffle = False
 |Layers||
 |---|---|
 |`Flatten`||
